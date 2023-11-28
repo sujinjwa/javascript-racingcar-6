@@ -1,4 +1,5 @@
 import NumberArray from './NumberArray.js';
+import Race from './Race.js';
 
 class GameController {
   #race;
@@ -7,11 +8,13 @@ class GameController {
     this.#race = new Race();
   }
 
-  start(tryNumber, names) {
+  start(names, tryNumber) {
     this.#race.setCars(names);
 
-    while (tryNumber) {
+    let currentTry = 0;
+    while (currentTry < tryNumber) {
       this.#race.moveCars(NumberArray.create(names.length));
+      currentTry += 1;
     }
   }
 }
