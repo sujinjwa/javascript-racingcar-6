@@ -11,6 +11,10 @@ class Race {
     names.forEach((name) => this.#cars.push(new Car(name)));
   }
 
+  moveCars(numbers) {
+    this.#cars.forEach((car, index) => car.move(numbers[index]));
+  }
+
   calculateMaxDistance() {
     let maxDistance = 0;
     this.#cars.forEach((car) => {
