@@ -12,9 +12,8 @@ describe('Race 클래스 테스트', () => {
     race.moveCars(randomNumbers);
 
     // then
-    const winners = race.calculateWinner();
-    const winnerNames = winners.map((winner) => winner.get()[0]);
-    expect(winnerNames).toStrictEqual(['james', 'jason']);
+    const winners = race.findWinner();
+    expect(winners).toStrictEqual(['james', 'jason']);
   });
 
   test('최종 우승자를 구한다.', async () => {
@@ -28,8 +27,7 @@ describe('Race 클래스 테스트', () => {
     race.moveCars(randomNumbers);
 
     // then
-    const winners = race.calculateWinner();
-    const winnerNames = winners.map((winner) => winner.get()[0]);
-    expect(winnerNames).toStrictEqual(['sujin']);
+    const winners = race.findWinner();
+    expect(winners).toStrictEqual(['sujin']);
   });
 });

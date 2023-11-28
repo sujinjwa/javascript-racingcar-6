@@ -30,11 +30,12 @@ class Race {
     return maxDistance;
   }
 
-  calculateWinner() {
+  findWinner() {
     const maxDistance = this.calculateMaxDistance();
     const winners = this.#cars.filter((car) => car.get()[1] === maxDistance);
+    const winnerNames = winners.map((winner) => winner.get()[0]);
 
-    return winners;
+    return winnerNames;
   }
 }
 
