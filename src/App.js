@@ -1,5 +1,4 @@
 import InputView from './view/InputView.js';
-
 import GameController from './domains/GameController.js';
 
 class App {

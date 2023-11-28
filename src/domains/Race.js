@@ -15,6 +15,10 @@ class Race {
     this.#cars.forEach((car, index) => car.move(numbers[index]));
   }
 
+  getCars() {
+    return this.#cars.map((car) => car.get());
+  }
+
   calculateMaxDistance() {
     let maxDistance = 0;
     this.#cars.forEach((car) => {
