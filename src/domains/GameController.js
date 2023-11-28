@@ -25,6 +25,10 @@ class GameController {
       currentTry += 1;
     }
   }
+
+  printWinners() {
+    OutputView.printWinners(this.#race.findWinner());
+  }
 }
 
 export default GameController;

@@ -11,6 +11,7 @@ class App {
     const tryNumber = await InputView.readTryNumber();
 
     this.gameController.start(cars, tryNumber);
+    this.gameController.printWinners();
   }
 }
 

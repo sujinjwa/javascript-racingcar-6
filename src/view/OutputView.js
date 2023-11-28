@@ -13,6 +13,10 @@ const OutputView = {
     });
     Console.print('');
   },
+
+  printWinners(names) {
+    Console.print(`최종 우승자 : ${names.join(', ')}`);
+  },
 };
 
 export default OutputView;
